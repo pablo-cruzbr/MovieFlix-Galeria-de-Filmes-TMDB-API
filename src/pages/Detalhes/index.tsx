@@ -4,6 +4,14 @@ import { useParams, useNavigate } from "react-router-dom";
 import './detalhes.css';
 import { toast} from "react-toastify";
 
+interface Movie {
+    id: number;
+    title: string;
+    poster_path: string | null;
+    overview: string;
+    vote_average: number;
+}
+
 function Detalhes() {
   const { id } = useParams();
   const [filme, setFilme] = useState<any | null>(null);
@@ -50,8 +58,9 @@ function Detalhes() {
 
   function salvarFilme(){
     const minhaLista = localStorage.getItem("@primeflix");
+    
 
-   let filmesSalvos = JSON.parse(minhaLista || '[]');
+    let filmesSalvos: Movie[] = JSON.parse(minhaLista || '[]');
 
     let hashFilme = filmesSalvos.some( (filmesSalvos) => filmesSalvos.id === filme.id)
 
