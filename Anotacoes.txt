@@ -1,4 +1,4 @@
-Foram utilizados as seguintes bibliotecas:
+Bibliotecas Utilizadas:
 
 1 - Inicialização: Inicializar o projeto
 npm run dev
