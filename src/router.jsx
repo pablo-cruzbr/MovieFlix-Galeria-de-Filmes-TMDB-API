@@ -8,7 +8,7 @@ import Favoritos from './pages/Favoritos';
 
 function RoutesApp() {
     return(
-        <BrowserRouter basename="/MovieFlix">
+        <BrowserRouter> 
             <Header/>
             <Routes>
                 <Route path='/' element={<Filme/>}/>
@@ -19,5 +19,4 @@ function RoutesApp() {
         </BrowserRouter>
     )
 }
-
 export default RoutesApp;
